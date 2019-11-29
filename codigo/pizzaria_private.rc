@@ -1,0 +1,36 @@
+/* THIS FILE WILL BE OVERWRITTEN BY DEV-C++ */
+/* DO NOT EDIT! */
+
+#include <windows.h> // include for version info constants
+
+
+A ICON "pizzaria.ico"
+
+//
+// TO CHANGE VERSION INFORMATION, EDIT PROJECT OPTIONS...
+//
+1 VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+  {
+    BLOCK "041604E4"
+    {
+      VALUE "CompanyName", "hasistemas"
+      VALUE "FileVersion", "1.0.0.0"
+      VALUE "FileDescription", "Sistema para pizzarias c/ franquia"
+      VALUE "InternalName", ""
+      VALUE "LegalCopyright", "hasistemas"
+      VALUE "LegalTrademarks", "hasistemas"
+      VALUE "OriginalFilename", "HP"
+      VALUE "ProductName", "HP"
+      VALUE "ProductVersion", "1.0.0.0"
+    }
+  }
+  BLOCK "VarFileInfo"
+  {
+    VALUE "Translation", 0x0416, 1252
+  }
+}

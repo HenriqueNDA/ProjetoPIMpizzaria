@@ -1,0 +1,99 @@
+# Project: pizzaria
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = pizzaria_private.res
+OBJ      = main.o source/designer/tela.o source/config/sistema.o source/config/registrar.o source/login/logar.o source/login/registro.o source/menu/menu.o source/designer/cabecalhos.o source/funcoes/funcionario/funcionario.o source/funcoes/cliente/cliente.o source/funcoes/cliente/editarcliente.o source/funcoes/pedidos/cadastrarpedido.o source/funcoes/gerarid/gerarid.o source/funcoes/cardapio/cardapio.o source/designer/escolha.o source/funcoes/funcionario/editarfunc.o source/funcoes/cardapio/editarcdp.o source/funcoes/pedidos/pedido.o source/funcoes/estoque/estoque.o source/funcoes/estoque/addestoque.o source/funcoes/relatorios/relatorios.o source/login/verificarsenha.o source/funcoes/pedidos/header.o $(RES)
+LINKOBJ  = main.o source/designer/tela.o source/config/sistema.o source/config/registrar.o source/login/logar.o source/login/registro.o source/menu/menu.o source/designer/cabecalhos.o source/funcoes/funcionario/funcionario.o source/funcoes/cliente/cliente.o source/funcoes/cliente/editarcliente.o source/funcoes/pedidos/cadastrarpedido.o source/funcoes/gerarid/gerarid.o source/funcoes/cardapio/cardapio.o source/designer/escolha.o source/funcoes/funcionario/editarfunc.o source/funcoes/cardapio/editarcdp.o source/funcoes/pedidos/pedido.o source/funcoes/estoque/estoque.o source/funcoes/estoque/addestoque.o source/funcoes/relatorios/relatorios.o source/login/verificarsenha.o source/funcoes/pedidos/header.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev/MinGW64/lib" -L"C:/Program Files (x86)/Dev/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev/MinGW64/include" -I"C:/Program Files (x86)/Dev/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev/MinGW64/include" -I"C:/Program Files (x86)/Dev/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = pizzaria.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+source/designer/tela.o: source/designer/tela.c
+	$(CC) -c source/designer/tela.c -o source/designer/tela.o $(CFLAGS)
+
+source/config/sistema.o: source/config/sistema.c
+	$(CC) -c source/config/sistema.c -o source/config/sistema.o $(CFLAGS)
+
+source/config/registrar.o: source/config/registrar.c
+	$(CC) -c source/config/registrar.c -o source/config/registrar.o $(CFLAGS)
+
+source/login/logar.o: source/login/logar.c
+	$(CC) -c source/login/logar.c -o source/login/logar.o $(CFLAGS)
+
+source/login/registro.o: source/login/registro.c
+	$(CC) -c source/login/registro.c -o source/login/registro.o $(CFLAGS)
+
+source/menu/menu.o: source/menu/menu.c
+	$(CC) -c source/menu/menu.c -o source/menu/menu.o $(CFLAGS)
+
+source/designer/cabecalhos.o: source/designer/cabecalhos.c
+	$(CC) -c source/designer/cabecalhos.c -o source/designer/cabecalhos.o $(CFLAGS)
+
+source/funcoes/funcionario/funcionario.o: source/funcoes/funcionario/funcionario.c
+	$(CC) -c source/funcoes/funcionario/funcionario.c -o source/funcoes/funcionario/funcionario.o $(CFLAGS)
+
+source/funcoes/cliente/cliente.o: source/funcoes/cliente/cliente.c
+	$(CC) -c source/funcoes/cliente/cliente.c -o source/funcoes/cliente/cliente.o $(CFLAGS)
+
+source/funcoes/cliente/editarcliente.o: source/funcoes/cliente/editarcliente.c
+	$(CC) -c source/funcoes/cliente/editarcliente.c -o source/funcoes/cliente/editarcliente.o $(CFLAGS)
+
+source/funcoes/pedidos/cadastrarpedido.o: source/funcoes/pedidos/cadastrarpedido.c
+	$(CC) -c source/funcoes/pedidos/cadastrarpedido.c -o source/funcoes/pedidos/cadastrarpedido.o $(CFLAGS)
+
+source/funcoes/gerarid/gerarid.o: source/funcoes/gerarid/gerarid.c
+	$(CC) -c source/funcoes/gerarid/gerarid.c -o source/funcoes/gerarid/gerarid.o $(CFLAGS)
+
+source/funcoes/cardapio/cardapio.o: source/funcoes/cardapio/cardapio.c
+	$(CC) -c source/funcoes/cardapio/cardapio.c -o source/funcoes/cardapio/cardapio.o $(CFLAGS)
+
+source/designer/escolha.o: source/designer/escolha.c
+	$(CC) -c source/designer/escolha.c -o source/designer/escolha.o $(CFLAGS)
+
+source/funcoes/funcionario/editarfunc.o: source/funcoes/funcionario/editarfunc.c
+	$(CC) -c source/funcoes/funcionario/editarfunc.c -o source/funcoes/funcionario/editarfunc.o $(CFLAGS)
+
+source/funcoes/cardapio/editarcdp.o: source/funcoes/cardapio/editarcdp.c
+	$(CC) -c source/funcoes/cardapio/editarcdp.c -o source/funcoes/cardapio/editarcdp.o $(CFLAGS)
+
+source/funcoes/pedidos/pedido.o: source/funcoes/pedidos/pedido.c
+	$(CC) -c source/funcoes/pedidos/pedido.c -o source/funcoes/pedidos/pedido.o $(CFLAGS)
+
+source/funcoes/estoque/estoque.o: source/funcoes/estoque/estoque.c
+	$(CC) -c source/funcoes/estoque/estoque.c -o source/funcoes/estoque/estoque.o $(CFLAGS)
+
+source/funcoes/estoque/addestoque.o: source/funcoes/estoque/addestoque.c
+	$(CC) -c source/funcoes/estoque/addestoque.c -o source/funcoes/estoque/addestoque.o $(CFLAGS)
+
+source/funcoes/relatorios/relatorios.o: source/funcoes/relatorios/relatorios.c
+	$(CC) -c source/funcoes/relatorios/relatorios.c -o source/funcoes/relatorios/relatorios.o $(CFLAGS)
+
+source/login/verificarsenha.o: source/login/verificarsenha.c
+	$(CC) -c source/login/verificarsenha.c -o source/login/verificarsenha.o $(CFLAGS)
+
+source/funcoes/pedidos/header.o: source/funcoes/pedidos/header.c
+	$(CC) -c source/funcoes/pedidos/header.c -o source/funcoes/pedidos/header.o $(CFLAGS)
+
+pizzaria_private.res: pizzaria_private.rc 
+	$(WINDRES) -i pizzaria_private.rc --input-format=rc -o pizzaria_private.res -O coff 
+
